@@ -192,6 +192,5 @@ async def help_cmd(ctx):
 
 # Run the bot
 if __name__ == "__main__":
-   if __name__ == "__main__":
  TOKEN = os.getenv('DISCORD_TOKEN')
  bot.run(TOKEN)
