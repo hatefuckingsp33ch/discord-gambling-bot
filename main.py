@@ -192,5 +192,13 @@ async def help_cmd(ctx):
 
 # Run the bot
 if __name__ == "__main__":
- TOKEN = os.getenv('DISCORD_TOKEN')
- bot.run(TOKEN)
+    TOKEN = os.getenv('DISCORD_TOKEN')
+    if not TOKEN:
+        print("ERROR: DISCORD_TOKEN environment variable is not set!")
+    else:
+        try:
+            bot.run(TOKEN)
+        except Exception as e:
+            print(f"ERROR: Failed to start bot: {e}")
+            import traceback
+            traceback.print_exc()
