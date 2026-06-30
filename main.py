@@ -179,8 +179,8 @@ async def coinflip(ctx, bet: int, choice: str):
     else:
         await ctx.send(f"🪙 **{result.upper()}!** You lost **{bet}** coins.")
 
-@bot.command(name='help')
-async def help_cmd(ctx):
+@bot.command(name='commands')
+async def commands_cmd(ctx):
     embed = discord.Embed(title="🎲 Gambling Bot Commands", color=0x00FF00)
     embed.add_field(name="!balance", value="Check your coins", inline=False)
     embed.add_field(name="!daily", value="Daily reward", inline=False)
